@@ -39,11 +39,9 @@ class MovieDetailFragment : AppInjectBindFragment() {
 
             when (it.status) {
                 ManageStatusEnum.LOADING -> {
-                    //binding.progressBar.visibility=View.VISIBLE
                     ProgressDialogUtil.showProgressDialog(requireContext(), false)
                 }
                 ManageStatusEnum.LOADING_DISMISS -> {
-                    //binding.progressBar.visibility=View.GONE
                     ProgressDialogUtil.dismissProgressDialog()
                 }
                 ManageStatusEnum.INTERNAL_SERVER_ERROR -> {
@@ -72,7 +70,6 @@ class MovieDetailFragment : AppInjectBindFragment() {
             movieId = arguments?.getString(AppConstants.MOVIE_ID)!!
         }
         requireActivity().onBackPressedDispatcher.addCallback(this) {
-            //findNavController().navigate(R.id.action_pop_to_movies)
             activity?.finish()
         }
     }
@@ -88,7 +85,6 @@ class MovieDetailFragment : AppInjectBindFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.imgBack.setOnClickListener {
-            //findNavController().navigate(R.id.action_pop_to_movies)
             activity?.finish()
         }
 

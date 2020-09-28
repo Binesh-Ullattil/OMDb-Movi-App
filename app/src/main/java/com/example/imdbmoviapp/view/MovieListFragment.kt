@@ -138,9 +138,6 @@ class MovieListFragment : AppInjectBindFragment(),MovieListAdapter.OnItemClickLi
     }
 
     override fun onItemClicked(position: Int, item: Search) {
-        /*val bundle: Bundle = Bundle()
-        bundle.putString(AppConstants.MOVIE_ID, item.imdbID)
-        findNavController().navigate(R.id.action_movie_to_movie_detail, bundle)*/
 
         val intent = Intent(activity, DetailActivity::class.java)
         intent.putExtra(AppConstants.MOVIE_ID,item.imdbID)
